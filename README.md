@@ -9,6 +9,7 @@ Synergy Simple Comments
 Bundle:
 
     bundle install
+    bundle exec rake simple_comments:install
 
 Использование
 =======
