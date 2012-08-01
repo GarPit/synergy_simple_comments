@@ -1,0 +1,12 @@
+---
+ru:
+  simple_comments: Отзывы
+  activerecord:
+    attributes:
+      simple_comment:
+        name: "Имя"
+        email: "Адрес электронной почты"
+        phone: "Телефон"
+        message: "Сообщение"
+        created_at: "Дата и время создания"
+  listing_comments: Список отзывов

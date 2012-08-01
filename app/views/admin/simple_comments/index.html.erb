@@ -1,0 +1,30 @@
+<h1><%= t("listing_comments") %></h1>
+<table class="index" id='listing_comments'>
+  <thead> 
+    <tr>
+      <%= hook :admin_comments_index_headers do %>
+        <th><%= t("activerecord.attributes.simple_comment.name") %></th>
+        <th><%= t("activerecord.attributes.simple_comment.email") %></th>
+        <th><%= t("activerecord.attributes.simple_comment.phone") %></th>
+        <th><%= t("activerecord.attributes.simple_comment.message") %></th>
+        <th><%= t("activerecord.attributes.simple_comment.created_at") %></th>
+        <th></th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+  <% @simple_comments.each do |comment| %>
+    <tr>
+      <%- locals = {:comment => comment} %>
+      <%= hook :admin_comments_index_rows, locals do %>
+        <td><%= comment.name %></td>
+        <td><%= comment.email %></td>
+        <td><%= comment.phone %></td>
+        <td><%= comment.message %></td>
+        <td><%= comment.created_at.to_s %></td>
+        <td class="actions"><%= link_to t("delete"), comment, :method => :delete %></td>
+      <% end %>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

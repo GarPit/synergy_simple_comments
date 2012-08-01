@@ -1,0 +1,25 @@
+<%= form_for @simple_comment do |form| %>
+  <div class="inputs left">
+      <div class="left address-block">
+        <p>
+          <label>Ваше имя *</label>
+          <%= form.text_field :name %>
+        </p>
+        <p>
+          <label>Контактный телефон *</label>
+          <%= form.text_field :phone %>
+        </p>
+        <p>
+          <label>Email</label>
+          <%= form.text_field :email %>
+        </p>
+        <p>
+          <label>Ваше сообщение</label>
+          <%= form.text_area :message %>
+        </p>
+      </div>
+  </div>
+  <div id="cart_block2" class="left">
+    <%= form.submit "Отправить" %>
+  </div>
+<% end %>
