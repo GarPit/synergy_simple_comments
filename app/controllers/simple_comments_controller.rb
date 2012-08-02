@@ -1,3 +1,4 @@
+# encoding: utf-8
 class SimpleCommentsController < Spree::BaseController
   respond_to :html
 
